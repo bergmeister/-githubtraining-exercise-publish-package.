@@ -1,0 +1,16 @@
+name: my Name
+
+on:
+  workflow_dispatch:
+
+jobs:
+  change-sql-dtu:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: test
+      shell: pwsh
+      run: echo "hello"
