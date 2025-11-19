@@ -21,13 +21,13 @@ jobs:
       uses: actions/checkout@v4
       
     - name: down
-      if: {{ inputs.scale_down }}
+      if: ${{ inputs.scale_down }}
       shell: bash
       run: |
         echo "down" 
     
     - name: up
-      if: {{ inputs.scale_up }}
+      if: ${{ inputs.scale_up }}
       shell: bash
       run: |
         echo "up" 
