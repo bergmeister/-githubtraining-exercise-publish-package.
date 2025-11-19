@@ -10,5 +10,5 @@ jobs:
   change-sql-dtu:
     uses: ./.github/workflows/test-reusable.yml
     with:
-      scale_down: github.event.schedule == '45 17 * * 1-5'
-      scale_up:   github.event.schedule == '40 16 * * 1-5'
+      scale_down: ${{ github.event.schedule == '45 17 * * 1-5' }}
+      scale_up:   ${{ github.event.schedule == '40 16 * * 1-5' }}
