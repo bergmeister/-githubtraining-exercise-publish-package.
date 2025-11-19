@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '30 12 * * 1-5'  # 30: minute, 12: hour, any day of month, any month, 1-5 Monday to Friday
-    - cron: '45 17 * * 1-5' 
+    - cron: '55 17 * * 1-5' 
 
 jobs:
   change-sql-dtu:
     uses: ./.github/workflows/test-reusable.yml
     with:
-      scale_down: ${{ github.event.schedule == '45 17 * * 1-5' }}
+      scale_down: ${{ github.event.schedule == '55 17 * * 1-5' }}
       scale_up:   ${{ github.event.schedule == '40 16 * * 1-5' }}
