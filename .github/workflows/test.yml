@@ -2,9 +2,9 @@ name: my Name
 
 on:
   workflow_dispatch:
-#  schedule:
-#    - cron: '30 4 * * 1-5'  # 30: minute, 4: hour, any day of month, any month, 1-5 Monday to Friday
-#    - cron: '30 16 * * 1-5' 
+  schedule:
+    - cron: '30 12 * * 1-5'  # 30: minute, 12: hour, any day of month, any month, 1-5 Monday to Friday
+    - cron: '30 16 * * 1-5' 
 
 jobs:
   change-sql-dtu:
